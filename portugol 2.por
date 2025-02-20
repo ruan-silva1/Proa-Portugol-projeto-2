@@ -27,20 +27,36 @@ programa
 		
 		
 		se(v1>v2 e v1>v3){
-		calcular(v1)
+			se(v2>v3){
+				calcular(v1,v2)
+				}
+			senao se(v3>v2){
+				calcular(v1,v3)
+			}
 		}
 		senao se (v2 > v1 e v2>v3){
-		calcular(v2)
+			se(v1>v3){
+			calcular(v2,v1)	
+			}
+			senao se(v3 > v1){
+			calcular(v2,v3)
+		}
 		}
 		senao se (v3 > v1 e v3 > v2){
-		calcular(v3)
+			se(v1>v2){
+			calcular(v3,v1)
+			}
+			 senao se(v2>v1){
+			calcular(v3,v2)
+			}
 		}
 		
 	}
 
-	funcao calcular(inteiro num){
+	funcao calcular(inteiro num, inteiro num2){
 		se(num > 0){
-			escreva("o maior numero é " + num + " e ele é positivo")
+			escreva("o maior numero é " + num + " e ele é positivo \n")
+			escreva("o segundo maior numero é " + num2 + " e ele é positivo")
 		}senao se(num <0){
 			escreva("o maior numero é " + num + "e ele é negativo")
 		}senao {escreva(num)}	
@@ -51,7 +67,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 525; 
+ * @POSICAO-CURSOR = 1059; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

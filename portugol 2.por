@@ -54,12 +54,20 @@ programa
 	}
 
 	funcao calcular(inteiro num, inteiro num2){
+		inteiro soma = num + num2
 		se(num > 0){
 			escreva("o maior numero é " + num + " e ele é positivo \n")
 			escreva("o segundo maior numero é " + num2 + " e ele é positivo")
+			escreva("\n a soma entre eles é " + soma)
 		}senao se(num <0){
 			escreva("o maior numero é " + num + "e ele é negativo")
-		}senao {escreva(num)}	
+			escreva("o segundo maior numero é " + num2 + "e ele é negativo")
+			escreva("\n a soma entre eles é " + soma)
+		}senao {
+			escreva("o maior numero é " + num + "e ele é nulo \n")
+			escreva("o segundo maior numero é " + num2 + " e ele é negativo \n")
+			escreva("\n a soma entre eles é " + soma)
+		}	
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -67,7 +75,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1059; 
+ * @POSICAO-CURSOR = 1745; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

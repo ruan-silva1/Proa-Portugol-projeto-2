@@ -8,12 +8,13 @@ programa
 		//Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
 		// Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
 		//Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
+
 		
 		inteiro v1,v2,v3
 		
 		//calcularMedia()
-		//somarMaiores()
-		revelarValor()
+		somarMaiores()
+		//revelarValor()
 		
 	}
 
@@ -57,44 +58,33 @@ programa
 	}
 
 	funcao somarMaiores(){
-		inteiro v1,v2, v3
-		escreva("escolha um numero")
-		leia(v1)
-		escreva("escolha um numero")
-		leia(v2)
-		escreva("escolha um numero")
-		leia(v3)
+		inteiro n,n2,n3,maiorNumeroEscolhido, segundoMaiorNumeroEscolhido
 		
-		se(v1==v2 ou v1==v3 ou v2==v3){
-		escreva("os numeros não podem ser iguais")
-		retorne
-		}
+		escreva("Escolha um numero \n")
+		leia(n)
+		maiorNumeroEscolhido = n
 		
-		se(v1>v2 e v1>v3){
-			se(v2>v3){
-				calcular(v1,v2)
-				}
-			senao se(v3>v2){
-				calcular(v1,v3)
-			}
+		escreva("Escolha outro numero \n")
+		leia(n2)
+		se (n2>maiorNumeroEscolhido){
+			maiorNumeroEscolhido = n2
+			segundoMaiorNumeroEscolhido = n
 		}
+		senao{
+			segundoMaiorNumeroEscolhido = n2
+		}
+		escreva("Escolha outro numero \n")
+		leia(n3)
+		se (n3 > maiorNumeroEscolhido){
+			maiorNumeroEscolhido = n3
+			segundoMaiorNumeroEscolhido = n2
+		}
+		senao se(n3 > segundoMaiorNumeroEscolhido){
+			segundoMaiorNumeroEscolhido = n3
+		}
+
+		calcular(maiorNumeroEscolhido, segundoMaiorNumeroEscolhido)
 		
-		senao se (v2 > v1 e v2>v3){
-			se(v1>v3){
-			calcular(v2,v1)	
-			}
-			senao se(v3 > v1){
-			calcular(v2,v3)
-		}
-		}
-		senao se (v3 > v1 e v3 > v2){
-			se(v1>v2){
-			calcular(v3,v1)
-			}
-			 senao se(v2>v1){
-			calcular(v3,v2)
-			}
-		}
 	}	
 
 	funcao calcular(inteiro num, inteiro num2){
@@ -119,8 +109,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 982; 
- * @DOBRAMENTO-CODIGO = [19, 39, 72, 58, 99];
+ * @POSICAO-CURSOR = 1748; 
+ * @DOBRAMENTO-CODIGO = [20, 40, 59, 89];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -15,13 +15,13 @@ programa
 		//Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação). O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações
 		
 		//calcularMedia()
-		//somarMaiores()
+		somarMaiores()
 		//revelarValor()
 		//somaLimitada()
 		//mediaLimitada()
 		//verificarVoto()
 		//verificarFormula()
-		calculadora()
+		//calculadora()
 	}
 
 	funcao calculadora(){
@@ -194,31 +194,26 @@ programa
 	}
 
 	funcao somarMaiores(){
-		inteiro n,n2,n3,maiorNumeroEscolhido, segundoMaiorNumeroEscolhido
+		inteiro valor,maiorNumeroEscolhido, segundoMaiorNumeroEscolhido
+		inteiro i=0
 		
 		escreva("Escolha um numero \n")
-		leia(n)
-		maiorNumeroEscolhido = n
-		
-		escreva("Escolha outro numero \n")
-		leia(n2)
-		se (n2>maiorNumeroEscolhido){
-			maiorNumeroEscolhido = n2
-			segundoMaiorNumeroEscolhido = n
-		}
-		senao{
-			segundoMaiorNumeroEscolhido = n2
-		}
-		escreva("Escolha outro numero \n")
-		leia(n3)
-		se (n3 > maiorNumeroEscolhido){
-			maiorNumeroEscolhido = n3
-			segundoMaiorNumeroEscolhido = n2
-		}
-		senao se(n3 > segundoMaiorNumeroEscolhido){
-			segundoMaiorNumeroEscolhido = n3
-		}
+		leia(valor)
+		maiorNumeroEscolhido = valor
+		segundoMaiorNumeroEscolhido = 0
 
+		enquanto(i<2){
+		escreva("Escolha outro numero \n")
+		leia(valor)
+		se (valor>maiorNumeroEscolhido){
+			segundoMaiorNumeroEscolhido = maiorNumeroEscolhido
+			maiorNumeroEscolhido = valor
+		}
+		senao se(valor > segundoMaiorNumeroEscolhido){
+			segundoMaiorNumeroEscolhido = valor
+		}
+		i++
+	}
 		calcular(maiorNumeroEscolhido, segundoMaiorNumeroEscolhido)
 		
 	}	
@@ -245,8 +240,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2417; 
- * @DOBRAMENTO-CODIGO = [26, 69, 91, 104, 129, 156, 176, 195, 225];
+ * @POSICAO-CURSOR = 6149; 
+ * @DOBRAMENTO-CODIGO = [26, 69, 91, 104, 129, 156, 176, 220];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

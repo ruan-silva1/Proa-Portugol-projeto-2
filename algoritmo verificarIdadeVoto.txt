@@ -1,0 +1,10 @@
+peca para a pessoa escrever o ano do seu nascimento
+pegue o ano atual e diminua pelo ano citado e grave como idade da pessoa
+se idade for maior que 17 escreva voce pode votar
+se nao escreva voce ainda nao pode votar
+
+ano nascimento = 
+idade = 19
+
+2005
+

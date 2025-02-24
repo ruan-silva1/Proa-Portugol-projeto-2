@@ -1,0 +1,12 @@
+grava a variavel soma como 0
+
+pede para o usuário escrever um numero
+se esse numero é maior que 0 e menor ou igual a 10 soma esse numero a variavel soma
+senao peça para escolher um outro numero novamente e diminua o repita em -1
+repita 4x
+
+grave média como soma / 4
+se  a media é maior que 5 
+escreva(voce passou no teste e a média)
+
+

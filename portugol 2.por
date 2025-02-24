@@ -9,13 +9,42 @@ programa
 		// Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
 		//Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
 		//Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
+		//Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente" 
+
 		
 		//calcularMedia()
 		//somarMaiores()
 		//revelarValor()
-		somaLimitada()
+		//somaLimitada()
+		//mediaLimitada()
+		
 
 	}
+
+	funcao mediaLimitada(){
+		inteiro soma = 0
+		inteiro n
+		inteiro i = 0
+
+		enquanto (i<4){
+		escreva("escolha um numero de 0 a 10 \n")
+		leia(n)
+		se(n>=0 e n<=10){
+			soma +=n
+		}
+		senao{
+			escreva("o numero não pode ser maior que 10 e nem menor que 0 escolha outro numero \n")
+			i--
+		}
+		i++
+	}
+		inteiro media = soma / 4
+		se (media > 5){
+			escreva("Parabens! Você passou no teste sua media foi " + media)
+		}
+		senao {escreva("Reprovado sua media foi de " + media)}
+	
+}
 
 	funcao somaLimitada(){
 		inteiro soma = 0
@@ -33,8 +62,10 @@ programa
 		i++
 		}
 
+		escreva("os numeros selecionados foram \n")
+		
 		enquanto(i2<6){
-		escreva("os numeros selecionados foram " + numeros_citados[0])
+		escreva(numeros_citados[i2] + " ")
 		i2++
 		}
 
@@ -133,8 +164,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1500; 
- * @DOBRAMENTO-CODIGO = [44, 64, 83, 113];
+ * @POSICAO-CURSOR = 1523; 
+ * @DOBRAMENTO-CODIGO = [23, 48, 75, 95, 114, 144];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

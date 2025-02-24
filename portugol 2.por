@@ -8,13 +8,37 @@ programa
 		//Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
 		// Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
 		//Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
-
-		
-		inteiro v1,v2,v3
+		//Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
 		
 		//calcularMedia()
-		somarMaiores()
+		//somarMaiores()
 		//revelarValor()
+		somaLimitada()
+
+	}
+
+	funcao somaLimitada(){
+		inteiro soma = 0
+		inteiro numeros_citados[6]
+		inteiro i=0
+		inteiro i2 = 0
+		inteiro n
+		enquanto(i<6){
+		escreva("digite um valor \n")
+		leia(n)
+		se(n<72){
+			soma+=n
+		}
+		numeros_citados[i] = n
+		i++
+		}
+
+		enquanto(i2<6){
+		escreva("os numeros selecionados foram " + numeros_citados[0])
+		i2++
+		}
+
+		escreva("a soma dos numeros limitados até 72 é " + soma)
 		
 	}
 
@@ -109,8 +133,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1748; 
- * @DOBRAMENTO-CODIGO = [20, 40, 59, 89];
+ * @POSICAO-CURSOR = 1500; 
+ * @DOBRAMENTO-CODIGO = [44, 64, 83, 113];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

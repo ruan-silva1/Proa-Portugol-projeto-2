@@ -10,15 +10,96 @@ programa
 		//Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
 		//Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
 		//Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente" 
-
+		// Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
+		//Tendo como entrada a altura e o gênero designado ao nascer (codificado da seguinte forma: 1: feminino - 2: masculino - ) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas.
+		//Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação). O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações
 		
 		//calcularMedia()
 		//somarMaiores()
 		//revelarValor()
 		//somaLimitada()
 		//mediaLimitada()
-		
+		//verificarVoto()
+		//verificarFormula()
+		calculadora()
+	}
 
+	funcao calculadora(){
+			inteiro v1,v2
+			cadeia sinal
+			inteiro resultado = 0
+			escreva("digite um valor inicial de 1 a 4 \n")
+			leia(v1)
+			enquanto( v1 <= 0 ou v1>5){
+				escreva("por favor digite um valor valido \n")
+				leia(v1)
+			}
+						
+			escreva("escolha um dos operadores + - * / \n")
+			
+			leia(sinal)
+			
+			enquanto(sinal != "+" e sinal != "*" e sinal != "-" e sinal != "/"){
+				escreva("escolha um sinal valido! \n")
+				leia(sinal)
+			}
+			
+			
+			escreva("digite o segundo valor de 1 a 4 \n")			
+			leia(v2)
+			
+			enquanto( v2 <= 0 ou v2 > 5){
+				escreva("por favor digite um valor valido \n")
+				leia(v2)
+			}						
+
+			se (sinal == "+") {
+        		resultado = v1 + v2
+		    } senao se (sinal == "-") {
+		        resultado = v1 - v2
+		    } senao se (sinal == "*") {
+		        resultado = v1 * v2
+		    } senao se (sinal == "/") {
+		        resultado = v1 / v2
+		    }
+
+			
+			escreva("a sua conta foi " + v1 + " " + sinal + " " +v2 + " o resultado dela é " + resultado)
+	}
+
+	funcao verificarFormula(){
+			real h
+			cadeia genero
+			real formula_de_calculo = 0
+			
+			escreva("digite sua altura \n")
+			leia(h)
+			escreva("digite seu genero, M/F \n")
+			leia(genero)
+			
+			se (genero == "m" ou genero == "M"){
+				 formula_de_calculo = ( 72.7 * h ) - 58
+			}
+			senao se (genero == "f" ou genero == "F"){
+				 formula_de_calculo = (62.1 * h) - 44.7
+			}
+			senao{
+				escreva("escreva o genero correto com M ou F")
+			}
+			escreva("formula de calculo igual a " + formula_de_calculo)
+	}
+
+	funcao verificarVoto(){
+		inteiro ano
+		escreva("digite o ano do seu nascimento \n")
+		leia(ano)	
+		inteiro idade_pessoa = 2025 - ano
+		se (idade_pessoa > 17){
+			escreva(" que pena você já pode votar! sua idade é " + idade_pessoa + "anos")
+		}
+		senao{
+			escreva("Parabens! você ainda não precisa votar! sua idade é " + idade_pessoa + "anos")
+		}
 	}
 
 	funcao mediaLimitada(){
@@ -164,8 +245,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1523; 
- * @DOBRAMENTO-CODIGO = [23, 48, 75, 95, 114, 144];
+ * @POSICAO-CURSOR = 2417; 
+ * @DOBRAMENTO-CODIGO = [26, 69, 91, 104, 129, 156, 176, 195, 225];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

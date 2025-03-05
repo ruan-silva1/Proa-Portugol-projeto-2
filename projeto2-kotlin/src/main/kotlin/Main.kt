@@ -3,8 +3,54 @@ package org.example
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    calcularMaiores()
+    //gerarMiniCalculadora()
+    //cacularPesoIdeal()
+    //calcularMaiores()
     //calcularMedia()
+}
+
+fun gerarMiniCalculadora() {
+    val num1 = pedirValor()
+    println("escolha um sinal + - / * ")
+    var sinal = readln()
+    while (sinal != "+" && sinal != "-" && sinal != "*" && sinal != "/") {
+        println("sinal invalido, escolha um sinal + - / * ")
+        sinal = readln()
+    }
+    val num2 = pedirValor()
+    val resultado = when (sinal){
+        "+" -> num1 + num2
+        "*" -> num1 * num2
+        "/" -> num1 / num2
+        "-" -> num1 - num2
+        else -> println("sinal invalido")
+    }
+    println("o resultado de $num1 $sinal $num2 é $resultado")
+}
+
+fun pedirValor(): Double{
+    println("escreva um valor")
+    var valor = readln().toDouble()
+    while (valor !in 1.0..5.0) {
+        println("escreva um valor entre 0 e 5")
+         valor = readln().toDouble()
+    }
+    return valor
+}
+
+
+
+fun cacularPesoIdeal(){
+    println("escreva sua altura")
+    val altura = readln().toDouble()
+    println("escreva seu genero")
+    val genero = readln()
+    val formulaCalculo = when(genero){
+        "masculino" -> (72.8 * altura ) - 58
+        "feminino" -> (62.1 * altura) - 44.7
+        else -> print("genero invalido")
+    }
+    println("seu peso ideal é $formulaCalculo")
 }
 
 fun calcularMedia(){

@@ -1,10 +1,12 @@
 pede para o usuario sua altura 
+grava a altura como double
 pede para o usuario seu genero
+grava o genero
 	
-	se o usario for do genero masculino 
+	caso o usario for do genero masculino 
 	grave formula de calculo como ( 72.7 * h ) - 58
 
-	se o usuario for do genero feminino grava formula de
+	caso o usuario for do genero feminino grava formula de
 	calculo como (62.1 * h) - 44.7
 	
 	escreva formula de calculo é igual a ...

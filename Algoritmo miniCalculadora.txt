@@ -1,24 +1,25 @@
 pede para o usuario um valor
-	enquanto o valor nao for maior que 0 e menor que 5
+grava o valor como double
+	enquanto o valor nao estiver entre 1 e 5
 	pede para o usuario escolher um outro valor e salva esse como no valor
-	se o valor for maior que 0 e menor que 5
-	grava na variavel num 1 o valor
+	
+grava na variavel num 1 o valor
 pede para o usuario um sinal
 	enquanto o sinal nao for (+ e - e x e /)
 		pede para o usuario um novo sinal e salva na 
 		variavel sinal
 	se o sinal for  (+ ou - ou = ou /)
 	grave na variavel sinal como o novo sinal
-	pede para o usuario outro valor
 	
+	pede para o usuario outro valor
 	enquanto o valor nao for maior que 0 e menor que 5
 	pede para o usuario escolher um outro valor e salva esse como no valor
 	se o valor for maior que 0 e menor que 5
 	grava na variavel num 2 o valor
 	
-	se sinal for +
+	caso o sinal for +
 		grave resultado igual v1 + v2
-	se *
+	se -
 		grave resultado igual v1 * v2
 	se /
 		grave resultado igual v1 / v2

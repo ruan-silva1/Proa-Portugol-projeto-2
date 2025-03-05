@@ -3,8 +3,8 @@ package org.example
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    //calcularMaiores()
-    calcularMedia()
+    calcularMaiores()
+    //calcularMedia()
 }
 
 fun calcularMedia(){
@@ -38,14 +38,16 @@ fun calcularMaiores(){
     var numero: Double = 0.toDouble()
     var maiorNumero: Double = Double.NEGATIVE_INFINITY
     var segundoMaiorNumero: Double = Double.NEGATIVE_INFINITY
+    var historicoNumeros = DoubleArray(6)
     var i = 1
-    for(i in 1..4){
+    for(i in 1..6){
         println("escolha o $i° numero")
         numero = readln().toDouble()
-        while(numero == maiorNumero || numero == segundoMaiorNumero){
+        while(historicoNumeros.toList().contains(numero)){
             println("os numeros nao podem ser iguais! Escolha outro numero!")
             numero = readln().toDouble()
         }
+        historicoNumeros[(i-1)] = numero
         if(numero > maiorNumero){
             segundoMaiorNumero = maiorNumero
             maiorNumero = numero
@@ -62,4 +64,5 @@ fun calcularMaiores(){
     println("o segundo maior numero é $segundoMaiorNumero e ele é $resultado2")
     println("a soma entre os dois maiores numeros $maiorNumero e $segundoMaiorNumero é igual a $soma")
     println("o ultimo numero escolhido foi $numero")
+    println("todos os numeros selecionados foram ${historicoNumeros.joinToString()}")
 }
